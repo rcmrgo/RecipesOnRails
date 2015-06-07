@@ -2,3 +2,9 @@
 <h1>Recipes On Rails</h1>
 <p>This is our home page</p>
 </div>
+<container>
+  <% if user_signed_in? %>
+  <li><%= link_to "New Recipe", 'recipes/new' %></li>
+  <li><%= link_to "My Recipes", 'recipes' %></li>
+  <% end %>
+</container>

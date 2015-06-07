@@ -15,12 +15,7 @@
 <body>
 <div class="container">
 <%= yield %>
-  <container>
-    <% if user_signed_in? %>
-    <li><%= link_to "New Recipe", 'recipes/new' %></li>
-    <li><%= link_to "My Recipes", 'recipes' %></li>
-    <% end %>
-  </container>
+
 </div>
 </body>
 </html>
