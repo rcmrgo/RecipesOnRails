@@ -1,4 +1,17 @@
 <div class="jumbotron">
-<h1>Recipes On Rails</h1>
-<p>This is our home page</p>
+	
+	<h1>Recipes On Rails</h1>
+
+	<% if user_signed_in? %>
+		<p>
+			You are signed in
+			<%= %>
+		</p>
+	<% else %>
+		<p> Sign in or create your account to start adding recipes </p>
+		<p><button type="button" class="btn btn-default"><%= link_to "Sign In", new_user_session_path %></button>
+		<button type="button" class="btn btn-success"><%= link_to "Create Account",new_user_registration_path %></button>
+		</p>
+	<% end %>
+
 </div>
