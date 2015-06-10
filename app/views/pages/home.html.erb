@@ -5,7 +5,9 @@
 	<% if user_signed_in? %>
 		<p>
 			You are signed in
-			<%= %>
+			<li><%= link_to "New Recipe", 'recipes/new' %></li>
+			<li><%= link_to "My Recipes", 'recipes' %></li>
+			
 		</p>
 	<% else %>
 		<p> Sign in or create your account to start adding recipes </p>
@@ -15,9 +17,3 @@
 	<% end %>
 
 </div>
-<container>
-  <% if user_signed_in? %>
-  <li><%= link_to "New Recipe", 'recipes/new' %></li>
-  <li><%= link_to "My Recipes", 'recipes' %></li>
-  <% end %>
-</container>
